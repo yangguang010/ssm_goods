@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yangguang.ssm.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="cn.yangguang.ssm.entity.User">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <result column="phone" property="phone" jdbcType="CHAR"></result>
+        <result column="username" property="username" jdbcType="VARCHAR"></result>
+        <result column="password" property="password" jdbcType="CHAR"></result>
+        <result column="QQ" property="qq" jdbcType="VARCHAR"></result>
+        <result column="create_at" property="createAt" jdbcType="VARCHAR"></result>
+        <result column="goods_num" property="goodsNum" jdbcType="INTEGER"></result>
+        <result column="power" property="power" jdbcType="TINYINT"></result>
+        <result column="last_login" property="lastLogin" jdbcType="VARCHAR"></result>
+        <result column="status" property="status" jdbcType="TINYINT"></result>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,phone,username,password,QQ,create_at,goods_num,power,last_login,status
+    </sql>
+
+    <delete id="deleteByPrimaryKey" parameterType="Integer">
+      DELETE FROM user WHERE id=#{id}
+    </delete>
+
+    <insert id="insert" parameterType="cn.yangguang.ssm.entity.User">
+      insert into user
+      (id, phone, username, password, QQ, create_at, goods_num, power, last_login, status)
+     values (#{id}, #{phone}, #{username},#{password}, #{qq}, #{createAt},#{goodsNum}, #{power}, #{lastLogin},#{status})
+    </insert>
+
+    <insert id="insertSelective" parameterType="cn.yangguang.ssm.entity.User">
+        INSERT INTO user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="qq != null">
+                QQ,
+            </if>
+            <if test="createAt != null">
+                create_at,
+            </if>
+            <if test="goodsNum != null">
+            goods_num,
+            </if>
+            <if test="power != null">
+                power,
+            </if>
+            <if test="lastLogin != null">
+                last_login,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="VALUES (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="phone != null">
+                #{phone},
+            </if>
+            <if test="username != null">
+                #{username},
+            </if>
+            <if test="password != null">
+                #{password},
+            </if>
+            <if test="qq != null">
+                #{qq},
+            </if>
+            <if test="createAt != null">
+                #{createAt},
+            </if>
+            <if test="goodsNum != null">
+                #{goodsNum},
+            </if>
+            <if test="power != null">
+                #{power},
+            </if>
+            <if test="lastLogin != null">
+                #{lastLogin},
+            </if>
+            <if test="status != null">
+                #{status},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="cn.yangguang.ssm.entity.User">
+        update user
+        <set >
+            <if test="phone != null" >
+                phone = #{phone,jdbcType=CHAR},
+            </if>
+            <if test="username != null" >
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null" >
+                password = #{password,jdbcType=CHAR},
+            </if>
+            <if test="qq != null" >
+                QQ = #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="createAt != null" >
+                create_at = #{createAt,jdbcType=VARCHAR},
+            </if>
+            <if test="goodsNum != null" >
+                goods_num = #{goodsNum,jdbcType=INTEGER},
+            </if>
+            <if test="power != null" >
+                power = #{power,jdbcType=TINYINT},
+            </if>
+            <if test="lastLogin != null" >
+                last_login = #{lastLogin,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="cn.yangguang.ssm.entity.User">
+        update user
+        set phone = #{phone,jdbcType=CHAR},
+          username = #{username,jdbcType=VARCHAR},
+          password = #{password,jdbcType=CHAR},
+          QQ = #{qq,jdbcType=VARCHAR},
+          create_at = #{createAt,jdbcType=VARCHAR},
+          goods_num = #{goodsNum,jdbcType=INTEGER},
+          power = #{power,jdbcType=TINYINT},
+          last_login = #{lastLogin,jdbcType=VARCHAR},
+          status = #{status,jdbcType=TINYINT}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getUserByPhone" parameterType="String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from user
+        where phone = #{phone,jdbcType=CHAR}
+    </select>
+
+    <update id="updateGoodsNum" parameterType="Integer">
+        update user set
+          goods_num = #{goodsNum,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getUserList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from user
+    </select>
+
+    <select id="selectByPrimaryKey" parameterType="Integer" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM user
+        WHERE id=#{id}
+    </select>
+
+</mapper>
