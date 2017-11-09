@@ -11,7 +11,7 @@
 	    http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
     <!--扫描service包下的所有使用的纾解的类型-->
-    <context:component-scan base-package="cn.yangguang.ssm.service"></context:component-scan>
+    <context:component-scan base-package="cn.yangguang.ssm.service.impl"></context:component-scan>
 
 
     <!--配置事务管理器-->

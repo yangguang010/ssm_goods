@@ -4,6 +4,7 @@ import cn.yangguang.ssm.dao.UserMapper;
 import cn.yangguang.ssm.entity.User;
 import cn.yangguang.ssm.service.UserService;
 import cn.yangguang.ssm.util.WriteExcel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -21,7 +22,7 @@ import java.util.List;
 @Service("userService")
 public class UserServiceImpl implements UserService{
 
-    @Resource
+    @Autowired
     private UserMapper userMapper;
 
     public void addUser(User user) {

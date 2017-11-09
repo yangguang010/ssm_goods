@@ -21,8 +21,8 @@ public class UserMapperTest extends BaseTest {
 
     @Test
     public void insertUserTest() {
-        User user = new User();
-        user.setId(20170005);
+       /* User user = new User();
+        user.setId(20170006);
         user.setPhone("18300904571");
         user.setCreateAt("2017-10-9");
         user.setGoodsNum(9);
@@ -31,7 +31,18 @@ public class UserMapperTest extends BaseTest {
         user.setUsername("song1");
         user.setQq("2287549045");
         //user.setPower();
-        //user.getStatus();
+        //user.getStatus();*/
+        User user = new User();
+        user.setId(8);
+        user.setPhone("18328584127");
+        user.setUsername("凤姐");
+        user.setPassword("llf41207");
+        user.setQq("2287549045");
+        user.setCreateAt("2017-10-05");
+        user.setGoodsNum(2);
+        user.setPower((byte)10);
+        user.setLastLogin(null);
+        user.setStatus(null);
 
         userMapper.insert(user);
 
