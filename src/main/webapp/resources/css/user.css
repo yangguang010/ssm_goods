@@ -172,7 +172,7 @@
     height: 100px;
 }
 .bannerimg {
-    background: url(../img/findfun.png);
+    background: url(../img/findfun1.png);
     height: 400px;
 }
 .bannerimg .bannerul {
@@ -180,7 +180,7 @@
     line-height: 30px;
     margin: 20px 0 0 0;
     float: left;
-    color: #000000;
+    color: #FF0000;
     font-size: 20px;
 }
 .text2 {

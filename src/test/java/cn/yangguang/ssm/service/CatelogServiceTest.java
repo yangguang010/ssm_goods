@@ -20,4 +20,13 @@ public class CatelogServiceTest extends BaseTest {
         System.out.println("Catelog_num = " + catelogs.size());
     }
 
+    @Test
+    public void updateCatelogNumTest() {
+        int id = 2;
+        int num = 10;
+
+        int update = catelogService.updateCatelogNum(id,num);
+        System.out.println(update);
+    }
+
 }

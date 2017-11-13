@@ -41,7 +41,7 @@
     </mvc:annotation-driven>
 
     <!-- 静态资源访问（不拦截此目录下的东西的访问） -->
-    <mvc:resources location="/resources/js/"  mapping="/js/**" />
+    <mvc:resources location="resources/js/"  mapping="/js/**" />
     <mvc:resources location="/resources/css/"  mapping="/css/**" />
     <mvc:resources location="/resources/img/"  mapping="/img/**" />
     <mvc:resources location="/resources/fonts/"  mapping="/fonts/**" />

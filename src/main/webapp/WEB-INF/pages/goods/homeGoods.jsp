@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>鲁大二手工坊</title>
+    <title>四川大学二手工坊</title>
     <link rel="stylesheet" href="../css/index.css" />
     <script type="text/javascript" src="../js/jquery.js" ></script>
     <script type="text/javascript" src="../js/materialize.min.js" ></script>
@@ -47,17 +47,17 @@
     </script>
 <body ng-view="ng-view">
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
-    描述：顶部
+    作者：songyangguang
+    时间：2017-11-13
+    描述：首页顶部
 -->
 <div ng-controller="headerController" class="header stark-components navbar-fixed ng-scope">
     <nav class="white nav1">
         <div class="nav-wrapper">
             <a href="<%=basePath%>goods/homeGoods" class="logo">
-                <em class="em1">鲁大</em>
+                <em class="em1">四川大学</em>
                 <em class="em2">二手工坊</em>
-                <em class="em3">ldu.market</em>
+                <em class="em3">SCU_WSN</em>
             </a>
             <div class="nav-wrapper search-bar">
                 <form ng-submit="search()" class="ng-pristine ng-invalid ng-invalid-required" action="/goods/search">
@@ -121,9 +121,9 @@
     </nav>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
-    描述：登录
+    作者：songyangguang
+    时间：2017-11-13
+    描述：首页登录按钮
 -->
 <div ng-controller="loginController" class="ng-scope">
     <div id="login-show" class="login stark-components">
@@ -157,8 +157,8 @@
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-06
+    作者：songyangguang
+    时间：2017-11-13
     描述：注册
 -->
 <div ng-controller="signupController" class="ng-scope">
@@ -221,8 +221,8 @@
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-13
     描述：左侧导航条
 -->
 <div ng-controller="sidebarController" class="sidebar stark-components ng-scope">
@@ -277,18 +277,18 @@
     <div class="info">
         <a href="" target="_blank">关于我们</a><em>-</em>
         <a href="">联系我们</a>
-        <p>©2017 LDUACM工作室</p>
+        <p>©2017 四川大学WSN实验室</p>
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-13
     描述：右侧显示部分
 -->
 <div class="main-content">
     <!--
-        作者：hlk_1135@outlook.com
-        时间：2017-05-05
+        作者：songyangguang
+        时间：2017-11-13
         描述：右侧banner（图片）部分
     -->
     <div class="slider-wapper">
@@ -299,11 +299,11 @@
                         <div class="bannerimg">
                             <ul class="bannerul">
                                 <p class="text1">亲爱的同学们：</p>
-                                <p class="text2">欢迎来到鲁东大学Squirrel校园二手工坊。临近毕业季的</p>
-                                <p class="text3">你，是否有太多的闲置与校友分享，为了追求更好的校园服</p>
-                                <p class="text4">务，我们打造了一个全新的校园平台——<span>Squirrel二手工坊</p>
-                                <p class="text5">这里有更多的闲置分享，更自由的校园话题讨论，你想要的，都在这里。</p>
-                                <p class="text6">加入Squirrel，你的大学，应更精彩。</p>
+                                <p class="text2">欢迎来到四川大学WSN_SCU校园二手工坊。临近毕业</p>
+                                <p class="text3">季的你，是否有太多的闲置与校友分享，为了追求更好的校</p>
+                                <p class="text4">园服务，我们打造了一个全新的校园平台——<span>WSN_SCU</p>
+                                <p class="text5">二手工坊这里有更多的闲置分享，更自由的校园话题讨论，你想要的，都在这里。</p>
+                                <p class="text6">加入WSN_SCU，你的大学，应更精彩。</p>
                             </ul>
                             <div class="logoimg">
                                 <img src="../img/p_logo.jpg" />
@@ -315,8 +315,8 @@
         </div>
     </div>
     <!--
-        作者：hlk_1135@outlook.com
-        时间：2017-05-05
+        作者：songyangguang
+        时间：2017-11-13
         描述：最新发布
     -->
     <div class="index-title">
@@ -337,7 +337,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -346,8 +346,8 @@
         </div>
     </div>
     <!--
-        作者：hlk_1135@outlook.com
-        时间：2017-05-05
+        作者：songyangguang
+        时间：2017-11-13
         描述：闲置数码
     -->
     <div class="index-title">
@@ -368,7 +368,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -377,8 +377,8 @@
         </div>
     </div>
     <!--
-        作者：hlk_1135@outlook.com
-        时间：2017-05-05
+        作者：songyangguang
+        时间：2017-11-13
         描述：校园代步
     -->
     <div class="index-title">
@@ -399,7 +399,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -425,7 +425,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -451,7 +451,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -477,7 +477,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -503,7 +503,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
@@ -529,7 +529,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>
