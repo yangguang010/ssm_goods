@@ -30,8 +30,8 @@
             </a>
         </div>
         <!--
-            作者：hlk_1135@outlook.com
-            时间：2017-05-10
+            作者：songyangguang
+            时间：2017-11-14
             描述：左侧个人中心栏
         -->
         <div id="user_nav">
@@ -43,7 +43,7 @@
                     <img src="<%=basePath%>img/findfun.png">
                 </div>
                 <span class="name">${cur_user.username}</span>
-                <span class="school">鲁东大学</span>
+                <span class="school">四川大学</span>
                 <span class="name">闲置数量：${cur_user.goodsNum}</span>
             </div>
             <div class="home_nav">
@@ -87,8 +87,8 @@
             </div>
         </div>
         <!--
-            作者：hlk_1135@outlook.com
-            时间：2017-05-10
+            作者：songyangguang
+            时间：2017-11-14
             描述：右侧内容区域
         -->
         <div id="user_content">
@@ -116,8 +116,8 @@
                 </form:form>
             </div>
             <!--
-                作者：hlk_1135@outlook.com
-                时间：2017-05-10
+                作者：songyangguang
+                时间：2017-11-14
                 描述：最右侧，可能认识的人
             -->
             <div class="recommend">
