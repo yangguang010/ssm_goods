@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>鲁大二手工坊</title>
+    <title>川大二手工坊</title>
     <link rel="stylesheet" href="<%=basePath%>css/index.css" />
     <script type="text/javascript" src="<%=basePath%>js/jquery.js" ></script>
     <script type="text/javascript" src="<%=basePath%>js/materialize.min.js" ></script>
@@ -46,17 +46,17 @@
     </script>
 <body ng-view="ng-view">
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-20
     描述：顶部
 -->
 <div ng-controller="headerController" class="header stark-components navbar-fixed ng-scope">
     <nav class="white nav1">
         <div class="nav-wrapper">
             <a href="<%=basePath%>goods/homeGoods" class="logo">
-                <em class="em1">鲁大</em>
+                <em class="em1">川大</em>
                 <em class="em2">二手工坊</em>
-                <em class="em3">ldu.market</em>
+                <em class="em3">SCU.WSN</em>
             </a>
             <div class="nav-wrapper search-bar">
                 <form ng-submit="search()" class="ng-pristine ng-invalid ng-invalid-required" action="">
@@ -120,8 +120,8 @@
     </nav>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-20
     描述：登录
 -->
 <div ng-controller="loginController" class="ng-scope">
@@ -156,8 +156,8 @@
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-06
+    作者：songyangguang
+    时间：2017-11-20
     描述：注册
 -->
 <div ng-controller="signupController" class="ng-scope">
@@ -220,8 +220,8 @@
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-20
     描述：左侧导航条
 -->
 <div ng-controller="sidebarController" class="sidebar stark-components ng-scope">
@@ -280,14 +280,14 @@
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-20
     描述：右侧显示部分
 -->
 <div class="main-content">
     <!--
-        作者：hlk_1135@outlook.com
-        时间：2017-05-05
+        作者：songyangguang
+        时间：2017-11-20
         描述：最新发布
     -->
     <div class="index-title">
@@ -308,7 +308,7 @@
                             <p><c:out value="${item.goods.name}"></c:out></p>
                         </div>
                         <div class="card-content item-location">
-                            <p>鲁东大学</p>
+                            <p>四川大学</p>
                             <p><c:out value="${item.goods.startTime}"></c:out></p>
                         </div>
                     </a>

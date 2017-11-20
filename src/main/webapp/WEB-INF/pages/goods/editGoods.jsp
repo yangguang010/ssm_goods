@@ -38,8 +38,8 @@
             </a>
         </div>
         <!--
-            作者：hlk_1135@outlook.com
-            时间：2017-05-10
+            作者：songyangguang
+            时间：2017-11-17
             描述：左侧个人中心栏
         -->
         <div id="user_nav">
@@ -51,7 +51,7 @@
                     <img src="">
                 </div>
                 <span class="name">${cur_user.username}</span>
-                <span class="school">鲁东大学</span>
+                <span class="school">四川大学</span>
                 <span class="name">闲置数量：${cur_user.goodsNum}</span>
             </div>
             <div class="home_nav">
@@ -95,8 +95,8 @@
             </div>
         </div>
         <!--
-	            作者：hlk_1135@outlook.com
-	            时间：2017-05-10
+	            作者：songyangguang
+	            时间：2017-11-17
 	            描述：发布物品
         -->
         <div id="user_content">
@@ -114,9 +114,14 @@
                        <span>(*必填)</span>
                    </div>
                    <div class="changeinfo">
-                        <span>原价：</span>
+                       <td><span>原价：</span></td>
+                        <td>
                         <input class="in_info" type="text" name="realPrice" placeholder="请输入商品原价" value="${goodsExtend.goods.realPrice}"/>
-                        <span id="checkphone">(*选填,请如实填写)</span>
+                        </td>
+                       <td>
+                           <span id="checkphone">(*选填,请如实填写)</span>
+                       </td>
+
                      </div>
                      <div class="changeinfo">
                         <span>物品类别：</span>
@@ -166,8 +171,8 @@
                 </form:form>
             </div>
             <!--
-                作者：hlk_1135@outlook.com
-                时间：2017-05-10
+                作者：songyangguang
+                时间：2017-11-17
                 描述：最右侧，可能认识的人
             -->
             <div class="recommend">

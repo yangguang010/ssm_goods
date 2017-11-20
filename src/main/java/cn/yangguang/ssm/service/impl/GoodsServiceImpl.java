@@ -86,6 +86,6 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Goods> getGoodsByUserId(Integer user_id) {
 
         List<Goods> goods = goodsMapper.getGoodsByUserId(user_id);
-        return null;
+        return goods;
     }
 }

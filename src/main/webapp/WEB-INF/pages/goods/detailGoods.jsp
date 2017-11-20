@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>鲁大二手工坊</title>
+    <title>川大二手工坊</title>
     <link rel="stylesheet" href="<%=basePath%>css/index.css" />
     <script type="text/javascript" src="<%=basePath%>js/jquery.js" ></script>
     <script type="text/javascript" src="<%=basePath%>js/materialize.min.js" ></script>
@@ -47,17 +47,17 @@
     </script>
 <body ng-view="ng-view">
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：宋阳光
+    时间：2017-11-20
     描述：顶部
 -->
 <div ng-controller="headerController" class="header stark-components navbar-fixed ng-scope">
     <nav class="white nav1">
         <div class="nav-wrapper">
             <a href="<%=basePath%>goods/homeGoods" class="logo">
-                <em class="em1">鲁大</em>
+                <em class="em1">川大</em>
                 <em class="em2">二手工坊</em>
-                <em class="em3">ldu.market</em>
+                <em class="em3">SCU.WSN</em>
             </a>
             <div class="nav-wrapper search-bar">
                 <form ng-submit="search()" class="ng-pristine ng-invalid ng-invalid-required">
@@ -121,8 +121,8 @@
     </nav>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-05
+    作者：songyangguang
+    时间：2017-11-20
     描述：登录
 -->
 <div ng-controller="loginController" class="ng-scope">
@@ -157,8 +157,8 @@
     </div>
 </div>
 <!--
-    作者：hlk_1135@outlook.com
-    时间：2017-05-06
+    作者：songyangguang
+    时间：2017-11-20
     描述：注册
 -->
 <div ng-controller="signupController" class="ng-scope">
@@ -247,7 +247,7 @@
             <p class="bargain">可讲价</p>
             <p>
                 <i class="iconfont"></i>
-                <em class="item-location">鲁东大学</em>
+                <em class="item-location">四川大学</em>
             </p>
         </div>
         <div class="publisher-info-title">
@@ -301,7 +301,7 @@
     <p class="section">${goodsExtend.goods.describle}</p>
     <p class="section"></p>
     <p class="section">
-        联系我的时候，请说明是在鲁大Squirrel校园二手工坊上看见的哦~
+        联系我的时候，请说明是在四川大学校园二手工坊上看见的哦~
     </p>
 </div>
 <div class="row detail-area">

@@ -1,5 +1,8 @@
 package cn.yangguang.ssm.controller;
 
+import cn.yangguang.ssm.entity.Goods;
+import cn.yangguang.ssm.entity.GoodsExtend;
+import cn.yangguang.ssm.entity.Image;
 import cn.yangguang.ssm.entity.User;
 import cn.yangguang.ssm.service.GoodsService;
 import cn.yangguang.ssm.service.ImageService;
@@ -8,6 +11,7 @@ import cn.yangguang.ssm.service.impl.UserServiceImpl;
 import cn.yangguang.ssm.util.DateUtil;
 import cn.yangguang.ssm.util.MD5;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,6 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by songyangguang on 2017/11/6.
@@ -43,12 +49,19 @@ public class UserController {
         return "redirect:/goods/homeGoods";
     }
 
+    /**
+     * 用户注册
+     * @param request
+     * @param response
+     * @param user
+     * @return
+     */
     @RequestMapping(value = "/addUser")
     public String addUser(HttpServletRequest request, HttpServletResponse response,
                           @ModelAttribute("user") User user) {
         String url = request.getHeader("Referer");
-        System.out.println("**************userName="+user.getUsername());
-        System.out.println("**************Password="+user.getPassword());
+        //System.out.println("**************userName="+user.getUsername());
+        //System.out.println("**************Password="+user.getPassword());
         User user1 = userService.getUserByPhone(user.getPhone());
         if(user1 != null) {//检测出用户不存在
             String time = DateUtil.getNowDay();
@@ -78,7 +91,7 @@ public class UserController {
         User cur_user = userService.getUserByPhone(user.getPhone());
         String url = request.getHeader("Referer");
 
-        System.out.println("**************Password="+url);
+        //System.out.println("**************Password="+url);
 
         if(cur_user != null) {
             String pwd = MD5.md5(user.getPassword());
@@ -143,6 +156,34 @@ public class UserController {
         userService.updateUserName(cur_user);//执行修改操作
         request.getSession().setAttribute("cur_user",cur_user);
         return new ModelAndView("redirect:/user/basic");
+    }
+
+    @RequestMapping(value = "/allGoods")
+    public ModelAndView goods(HttpServletRequest request) {
+        User cur_user = (User) request.getSession().getAttribute("cur_user");
+        int userId = cur_user.getId();
+        List<Goods> goodsList = goodsService.getGoodsByUserId(userId);
+        List<GoodsExtend> goodsAndImage = new ArrayList<GoodsExtend>();
+
+        for (int i = 0; i < goodsList.size(); i++) {
+            //将用户信息和image信息封装到GoodsExtend类中，传给前台
+
+            GoodsExtend goodsExtend = new GoodsExtend();
+            Goods goods = goodsList.get(i);
+            List<Image> images = imageService.getImagesByGoodsPrimaryKey(goods.getId());
+            goodsExtend.setGoods(goods);
+            goodsExtend.setImages(images);
+
+            goodsAndImage.add(goodsExtend);
+        }
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("goodsAndImage",goodsAndImage);
+        modelAndView.setViewName("/user/goods");
+        System.out.println("modelAndView="+modelAndView.getViewName());
+
+        return modelAndView;
+
     }
 
 }

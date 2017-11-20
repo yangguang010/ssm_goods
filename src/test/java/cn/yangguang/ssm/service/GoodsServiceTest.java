@@ -6,6 +6,8 @@ import cn.yangguang.ssm.util.DateUtil;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 /**
  * Created by songyangguang on 2017/11/10.
  */
@@ -46,6 +48,12 @@ public class GoodsServiceTest extends BaseTest{
         int goodsId = 35;
 
         goodsService.deleteGoodsByPrimaryKey(goodsId);
+
+    }
+
+    @Test
+    public void getGoodsByUserIdTest() {
+        List<Goods> goods = goodsService.getGoodsByUserId(6);
 
     }
 
